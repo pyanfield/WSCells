@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9042F12E171ECC2600090240 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9042F12D171ECC2600090240 /* UIKit.framework */; };
+		9042F130171ECC2600090240 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9042F12F171ECC2600090240 /* Foundation.framework */; };
+		9042F132171ECC2600090240 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9042F131171ECC2600090240 /* CoreGraphics.framework */; };
+		9042F138171ECC2600090240 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9042F136171ECC2600090240 /* InfoPlist.strings */; };
+		9042F13A171ECC2600090240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F139171ECC2600090240 /* main.m */; };
+		9042F13E171ECC2600090240 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F13D171ECC2600090240 /* AppDelegate.m */; };
+		9042F140171ECC2600090240 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9042F13F171ECC2600090240 /* Default.png */; };
+		9042F142171ECC2600090240 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9042F141171ECC2600090240 /* Default@2x.png */; };
+		9042F144171ECC2600090240 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9042F143171ECC2600090240 /* Default-568h@2x.png */; };
+		9042F147171ECC2600090240 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F146171ECC2600090240 /* ViewController.m */; };
+		9042F14A171ECC2600090240 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9042F148171ECC2600090240 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9042F12A171ECC2600090240 /* WSCellsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSCellsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9042F12D171ECC2600090240 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9042F12F171ECC2600090240 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9042F131171ECC2600090240 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9042F135171ECC2600090240 /* WSCellsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WSCellsDemo-Info.plist"; sourceTree = "<group>"; };
+		9042F137171ECC2600090240 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9042F139171ECC2600090240 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9042F13B171ECC2600090240 /* WSCellsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSCellsDemo-Prefix.pch"; sourceTree = "<group>"; };
+		9042F13C171ECC2600090240 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9042F13D171ECC2600090240 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9042F13F171ECC2600090240 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9042F141171ECC2600090240 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9042F143171ECC2600090240 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9042F145171ECC2600090240 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9042F146171ECC2600090240 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9042F149171ECC2600090240 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9042F127171ECC2600090240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9042F12E171ECC2600090240 /* UIKit.framework in Frameworks */,
+				9042F130171ECC2600090240 /* Foundation.framework in Frameworks */,
+				9042F132171ECC2600090240 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9042F121171ECC2600090240 = {
+			isa = PBXGroup;
+			children = (
+				9042F133171ECC2600090240 /* WSCellsDemo */,
+				9042F12C171ECC2600090240 /* Frameworks */,
+				9042F12B171ECC2600090240 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9042F12B171ECC2600090240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9042F12A171ECC2600090240 /* WSCellsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9042F12C171ECC2600090240 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9042F12D171ECC2600090240 /* UIKit.framework */,
+				9042F12F171ECC2600090240 /* Foundation.framework */,
+				9042F131171ECC2600090240 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9042F133171ECC2600090240 /* WSCellsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9042F13C171ECC2600090240 /* AppDelegate.h */,
+				9042F13D171ECC2600090240 /* AppDelegate.m */,
+				9042F145171ECC2600090240 /* ViewController.h */,
+				9042F146171ECC2600090240 /* ViewController.m */,
+				9042F148171ECC2600090240 /* ViewController.xib */,
+				9042F134171ECC2600090240 /* Supporting Files */,
+			);
+			path = WSCellsDemo;
+			sourceTree = "<group>";
+		};
+		9042F134171ECC2600090240 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9042F135171ECC2600090240 /* WSCellsDemo-Info.plist */,
+				9042F136171ECC2600090240 /* InfoPlist.strings */,
+				9042F139171ECC2600090240 /* main.m */,
+				9042F13B171ECC2600090240 /* WSCellsDemo-Prefix.pch */,
+				9042F13F171ECC2600090240 /* Default.png */,
+				9042F141171ECC2600090240 /* Default@2x.png */,
+				9042F143171ECC2600090240 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9042F129171ECC2600090240 /* WSCellsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9042F14D171ECC2600090240 /* Build configuration list for PBXNativeTarget "WSCellsDemo" */;
+			buildPhases = (
+				9042F126171ECC2600090240 /* Sources */,
+				9042F127171ECC2600090240 /* Frameworks */,
+				9042F128171ECC2600090240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WSCellsDemo;
+			productName = WSCellsDemo;
+			productReference = 9042F12A171ECC2600090240 /* WSCellsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9042F122171ECC2600090240 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = wshan;
+			};
+			buildConfigurationList = 9042F125171ECC2600090240 /* Build configuration list for PBXProject "WSCellsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9042F121171ECC2600090240;
+			productRefGroup = 9042F12B171ECC2600090240 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9042F129171ECC2600090240 /* WSCellsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9042F128171ECC2600090240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9042F138171ECC2600090240 /* InfoPlist.strings in Resources */,
+				9042F140171ECC2600090240 /* Default.png in Resources */,
+				9042F142171ECC2600090240 /* Default@2x.png in Resources */,
+				9042F144171ECC2600090240 /* Default-568h@2x.png in Resources */,
+				9042F14A171ECC2600090240 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9042F126171ECC2600090240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9042F13A171ECC2600090240 /* main.m in Sources */,
+				9042F13E171ECC2600090240 /* AppDelegate.m in Sources */,
+				9042F147171ECC2600090240 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9042F136171ECC2600090240 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9042F137171ECC2600090240 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9042F148171ECC2600090240 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9042F149171ECC2600090240 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9042F14B171ECC2600090240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9042F14C171ECC2600090240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9042F14E171ECC2600090240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSCellsDemo/WSCellsDemo-Prefix.pch";
+				INFOPLIST_FILE = "WSCellsDemo/WSCellsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9042F14F171ECC2600090240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSCellsDemo/WSCellsDemo-Prefix.pch";
+				INFOPLIST_FILE = "WSCellsDemo/WSCellsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9042F125171ECC2600090240 /* Build configuration list for PBXProject "WSCellsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9042F14B171ECC2600090240 /* Debug */,
+				9042F14C171ECC2600090240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9042F14D171ECC2600090240 /* Build configuration list for PBXNativeTarget "WSCellsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9042F14E171ECC2600090240 /* Debug */,
+				9042F14F171ECC2600090240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9042F122171ECC2600090240 /* Project object */;
+}
