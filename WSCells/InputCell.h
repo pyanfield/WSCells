@@ -29,6 +29,9 @@ typedef enum GroupCellPosition{
 @property (nonatomic) GroupCellPosition position;
 @property (nonatomic, strong) UIColor *borderColor;
 @property (nonatomic, strong) UIColor *fillColor;
+@property (nonatomic, strong) UIColor *separateLineColor;
+@property (nonatomic, strong) UIColor *titleColor;
+@property (nonatomic, strong) UIColor *valueColor;
 
 @property (nonatomic, weak)   id <InputCellDelegate>   delegate;
 @property (nonatomic) int flag;
@@ -40,8 +43,7 @@ typedef enum GroupCellPosition{
 @property (nonatomic) UITextAlignment inputFieldAlignment;
 // currentValue maybe can be replaced by inputValue, need test more.
 @property (nonatomic, strong) NSString *currentValue;
-
-- (UITextField*)inputField;
+@property (nonatomic, readonly) UITextField *inputField;
 
 @end
 

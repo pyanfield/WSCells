@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum{
-    ButtonAdd,
-    ButtonDelete
-} ButtonType;
-
 @interface InfoConfirmButtonCell : UITableViewCell
-
-@property (nonatomic) ButtonType accessoryBtnType;
-@property (nonatomic, strong) UIButton *accessoryBtn;
 
 @end

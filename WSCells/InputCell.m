@@ -8,8 +8,12 @@
 
 #import "InputCell.h"
 
-#define TITLE_WIDTH 50.0
-#define INPUT_COLOR COLOR(0x575757FF)
+#define TITLE_WIDTH 100
+#define C_TITLE         COLOR(0x0c4769FF)
+#define C_SEPARATOR     COLOR(0x7c627cFF)
+#define C_BORDER        COLOR(0x627c62FF)
+#define C_VALUE         COLOR(0x575757FF)
+#define C_FILL          COLOR(0x89a289ff)
 
 @interface InputCell()
 
@@ -28,9 +32,10 @@
 @implementation InputCell
 
 @synthesize inputValue = _inputValue;
-@synthesize borderColor = _borderColor, fillColor = _fillColor;
+@synthesize borderColor = _borderColor, fillColor = _fillColor, separateLineColor = _separateLineColor;
 @synthesize hasAccessoryView = _hasAccessoryView;
 @synthesize editableText = _editableText;
+@synthesize titleColor = _titleColor, valueColor = _valueColor;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -44,7 +49,7 @@
         _titleWidth = TITLE_WIDTH;
         _inputKeyboardType = UIKeyboardTypeDefault;
         _secureTextEntry = NO;
-        _fillColor = [UIColor whiteColor];
+        _fillColor = C_FILL;
         _margin = UI_MIDDLE_GAP;
         _cornerRadius = 10.0;
         _inputTextField.delegate = self;
@@ -53,6 +58,10 @@
         _inputFieldFont = [UIFont systemFontOfSize:FONT_SMALL];
         _numOfDigit = -1;
         _editableText = YES;
+        _separateLineColor = C_SEPARATOR;
+        _borderColor = C_BORDER;
+        _titleColor = C_TITLE;
+        _valueColor = C_VALUE;
         
         // calculate the height for different size
         _titleHeight = [_titleFont lineHeight];
@@ -77,11 +86,11 @@
     self.titleLabel.frame = CGRectMake(self.margin+UI_MIDDLE_GAP, (self.contentView.bounds.size.height-self.titleHeight)/2, self.titleWidth,self.titleHeight);
     self.titleLabel.font = self.titleFont;
     self.titleLabel.backgroundColor = [UIColor clearColor];
-    self.titleLabel.textColor = C_BLUE_TITLE;
+    self.titleLabel.textColor = self.titleColor;
     self.titleLabel.textAlignment = self.titleAlignment;
     
     if (_hasAccessoryView) {
-        UIImageView *accessory = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_blue"]];
+        UIImageView *accessory = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
         accessory.frame = CGRectMake(self.bounds.size.width - 2.5*UI_MIDDLE_GAP - accessory.bounds.size.width, (self.contentView.bounds.size.height-accessory.bounds.size.height)/2, accessory.bounds.size.width,accessory.bounds.size.height);
         [self.contentView addSubview:accessory];
         
@@ -91,7 +100,7 @@
     }
     self.inputTextField.font = self.inputFieldFont;
     self.inputTextField.backgroundColor = [UIColor clearColor];
-    self.inputTextField.textColor = INPUT_COLOR;
+    self.inputTextField.textColor = self.valueColor;
     self.inputTextField.textAlignment = self.inputFieldAlignment;
 }
 
@@ -102,7 +111,7 @@
     CGContextRef c = UIGraphicsGetCurrentContext();
     CGContextSaveGState(c);
     CGContextSetFillColorWithColor(c, [self.fillColor CGColor]);
-    CGContextSetStrokeColorWithColor(c, [C_STROCK CGColor]);
+    CGContextSetStrokeColorWithColor(c, [self.borderColor CGColor]);
    
     switch (self.position) {
         case GroupCellPositionTop:
@@ -147,7 +156,7 @@
     CGContextRestoreGState(c);
     // draw seperator line for the cell
     CGContextSaveGState(c);
-    CGContextSetStrokeColorWithColor(c, [C_SEPARATOR CGColor]);
+    CGContextSetStrokeColorWithColor(c, [self.separateLineColor CGColor]);
     switch (self.position) {
         case GroupCellPositionTop:
             CGContextMoveToPoint(c, rect.size.width-self.margin-0.5f, rect.size.height);
@@ -228,7 +237,7 @@
     
     // if numOfDigit>0, we need implement the currentStr as a number.
     if (self.numOfDigit > 0) {
-        NSString* msg = [currentStr trimSpaceAndReturn];//stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString* msg = [currentStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         int len = msg.length;
         NSRange tmpRange;
         tmpRange.location = 0;
@@ -336,6 +345,17 @@
     return _borderColor;
 }
 
+- (void)setSeparateLineColor:(UIColor *)separateLineColor
+{
+    _separateLineColor = separateLineColor;
+    [self setNeedsDisplay];
+}
+
+- (UIColor*)separateLineColor
+{
+    return  _separateLineColor;
+}
+
 - (void)setFillColor:(UIColor *)fillColor
 {
     _fillColor = fillColor;
@@ -367,6 +387,28 @@
 - (BOOL)editableText
 {
     return _editableText;
+}
+
+- (void)setTitleColor:(UIColor *)titleColor
+{
+    _titleColor = titleColor;
+    [self setNeedsLayout];
+}
+
+- (UIColor*)titleColor
+{
+    return _titleColor;
+}
+
+- (void)setValueColor:(UIColor *)valueColor
+{
+    _valueColor = valueColor;
+    [self setNeedsLayout];
+}
+
+- (UIColor*)valueColor
+{
+    return _valueColor;
 }
 
 @end

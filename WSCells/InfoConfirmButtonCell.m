@@ -30,19 +30,4 @@
     return self;
 }
 
-- (void)setAccessoryBtnType:(ButtonType)accessoryBtnType
-{
-    _accessoryBtnType = accessoryBtnType;
-    if (_accessoryBtnType == ButtonAdd) {
-
-        
-    }else if(_accessoryBtnType == ButtonDelete){
-        self.accessoryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *image = [UIImage imageNamed:@"delete"];
-        self.accessoryBtn.frame = CGRectMake(UI_SCREEN_W - UI_MIDDLE_GAP - image.size.width, (UI_NAVIGATION_BAR_HEIGHT - image.size.height)/2,image.size.width,image.size.height);
-        [self.accessoryBtn setImage:image forState:UIControlStateNormal];
-        [self.contentView addSubview:self.accessoryBtn];
-    }
-}
-
 @end

@@ -18,6 +18,10 @@
 		9042F144171ECC2600090240 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9042F143171ECC2600090240 /* Default-568h@2x.png */; };
 		9042F147171ECC2600090240 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F146171ECC2600090240 /* ViewController.m */; };
 		9042F14A171ECC2600090240 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9042F148171ECC2600090240 /* ViewController.xib */; };
+		9042F159171ECD6600090240 /* CellGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F154171ECD6600090240 /* CellGradientLayer.m */; };
+		9042F15A171ECD6600090240 /* InfoConfirmButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F156171ECD6600090240 /* InfoConfirmButtonCell.m */; };
+		9042F15B171ECD6600090240 /* InputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042F158171ECD6600090240 /* InputCell.m */; };
+		9042F15F171ED1D300090240 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9042F15E171ED1D200090240 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,15 @@
 		9042F145171ECC2600090240 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9042F146171ECC2600090240 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9042F149171ECC2600090240 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9042F153171ECD6600090240 /* CellGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellGradientLayer.h; sourceTree = "<group>"; };
+		9042F154171ECD6600090240 /* CellGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellGradientLayer.m; sourceTree = "<group>"; };
+		9042F155171ECD6600090240 /* InfoConfirmButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoConfirmButtonCell.h; sourceTree = "<group>"; };
+		9042F156171ECD6600090240 /* InfoConfirmButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoConfirmButtonCell.m; sourceTree = "<group>"; };
+		9042F157171ECD6600090240 /* InputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCell.h; sourceTree = "<group>"; };
+		9042F158171ECD6600090240 /* InputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCell.m; sourceTree = "<group>"; };
+		9042F15C171ECE9700090240 /* WSCellConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCellConsts.h; sourceTree = "<group>"; };
+		9042F15D171ED09800090240 /* WSCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSCells.h; sourceTree = "<group>"; };
+		9042F15E171ED1D200090240 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9042F15F171ED1D300090240 /* QuartzCore.framework in Frameworks */,
 				9042F12E171ECC2600090240 /* UIKit.framework in Frameworks */,
 				9042F130171ECC2600090240 /* Foundation.framework in Frameworks */,
 				9042F132171ECC2600090240 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +70,7 @@
 		9042F121171ECC2600090240 = {
 			isa = PBXGroup;
 			children = (
+				9042F152171ECD6600090240 /* WSCells */,
 				9042F133171ECC2600090240 /* WSCellsDemo */,
 				9042F12C171ECC2600090240 /* Frameworks */,
 				9042F12B171ECC2600090240 /* Products */,
@@ -73,6 +88,7 @@
 		9042F12C171ECC2600090240 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9042F15E171ED1D200090240 /* QuartzCore.framework */,
 				9042F12D171ECC2600090240 /* UIKit.framework */,
 				9042F12F171ECC2600090240 /* Foundation.framework */,
 				9042F131171ECC2600090240 /* CoreGraphics.framework */,
@@ -105,6 +121,22 @@
 				9042F143171ECC2600090240 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9042F152171ECD6600090240 /* WSCells */ = {
+			isa = PBXGroup;
+			children = (
+				9042F153171ECD6600090240 /* CellGradientLayer.h */,
+				9042F154171ECD6600090240 /* CellGradientLayer.m */,
+				9042F155171ECD6600090240 /* InfoConfirmButtonCell.h */,
+				9042F156171ECD6600090240 /* InfoConfirmButtonCell.m */,
+				9042F157171ECD6600090240 /* InputCell.h */,
+				9042F158171ECD6600090240 /* InputCell.m */,
+				9042F15C171ECE9700090240 /* WSCellConsts.h */,
+				9042F15D171ED09800090240 /* WSCells.h */,
+			);
+			name = WSCells;
+			path = ../WSCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +208,9 @@
 				9042F13A171ECC2600090240 /* main.m in Sources */,
 				9042F13E171ECC2600090240 /* AppDelegate.m in Sources */,
 				9042F147171ECC2600090240 /* ViewController.m in Sources */,
+				9042F159171ECD6600090240 /* CellGradientLayer.m in Sources */,
+				9042F15A171ECD6600090240 /* InfoConfirmButtonCell.m in Sources */,
+				9042F15B171ECD6600090240 /* InputCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
