@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum GroupCellPosition{
-    GroupCellPositionSingle,
-    GroupCellPositionTop,
-    GroupCellPositionBottom,
-    GroupCellPositionMiddel
-}GroupCellPosition;
+typedef enum InputCellPosition{
+    InputCellPositionSingle,
+    InputCellPositionTop,
+    InputCellPositionBottom,
+    InputCellPositionMiddel
+}InputCellPosition;
+
+typedef enum {
+    InputCellAlignementLeft,
+    InputCellAlignementRight,
+    InputCellAlignementCenter,
+    InputCellAlignementSides
+}InputCellAlignement;
 
 @protocol InputCellDelegate;
 
@@ -26,7 +33,7 @@ typedef enum GroupCellPosition{
 @property (nonatomic) UIKeyboardType inputKeyboardType;
 @property (nonatomic) BOOL secureTextEntry;
 
-@property (nonatomic) GroupCellPosition position;
+@property (nonatomic) InputCellPosition position;
 @property (nonatomic, strong) UIColor *borderColor;
 @property (nonatomic, strong) UIColor *fillColor;
 @property (nonatomic, strong) UIColor *separateLineColor;
@@ -39,11 +46,11 @@ typedef enum GroupCellPosition{
 @property (nonatomic) int limitInputCharactersLength;
 @property (nonatomic) BOOL hasAccessoryView;
 @property (nonatomic) BOOL editableText;
-@property (nonatomic) UITextAlignment titleAlignment;
-@property (nonatomic) UITextAlignment inputFieldAlignment;
 // currentValue maybe can be replaced by inputValue, need test more.
 @property (nonatomic, strong) NSString *currentValue;
 @property (nonatomic, readonly) UITextField *inputField;
+
+- (void)setInputCellAlignement:(InputCellAlignement)inputCellAlignement;
 
 @end
 

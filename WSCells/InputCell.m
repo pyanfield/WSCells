@@ -25,6 +25,8 @@
 @property (nonatomic, strong) UIFont *inputFieldFont;
 @property (nonatomic) float titleHeight;
 @property (nonatomic) float inputFieldHeight;
+@property (nonatomic) NSTextAlignment titleAlignment;
+@property (nonatomic) NSTextAlignment inputFieldAlignment;
 //@property (nonatomic) float radius;
 
 @end
@@ -114,7 +116,7 @@
     CGContextSetStrokeColorWithColor(c, [self.borderColor CGColor]);
    
     switch (self.position) {
-        case GroupCellPositionTop:
+        case InputCellPositionTop:
             CGContextMoveToPoint(c, self.margin, self.cornerRadius);
             CGContextAddArc(c, self.margin+self.cornerRadius, self.cornerRadius,self.cornerRadius, M_PI,M_PI+M_PI/2, 0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin - self.cornerRadius, 0.0);
@@ -124,7 +126,7 @@
             CGContextAddLineToPoint(c, self.margin, self.cornerRadius);
             CGContextDrawPath(c,kCGPathFillStroke);
             break;
-        case GroupCellPositionBottom:
+        case InputCellPositionBottom:
             CGContextMoveToPoint(c, self.margin, 0.0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin, 0.0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin, rect.size.height-self.cornerRadius);
@@ -134,11 +136,11 @@
             CGContextAddLineToPoint(c, self.margin, 0.0);
             CGContextDrawPath(c,kCGPathFillStroke);
             break;
-        case GroupCellPositionMiddel:        
+        case InputCellPositionMiddel:        
             CGContextAddRect(c, CGRectMake(self.margin, 0.0, rect.size.width-2*self.margin, rect.size.height));
             CGContextDrawPath(c,kCGPathFillStroke);
             break;
-        case GroupCellPositionSingle:
+        case InputCellPositionSingle:
             CGContextMoveToPoint(c, self.margin, self.cornerRadius);
             CGContextAddArc(c, self.margin+self.cornerRadius, self.cornerRadius,self.cornerRadius, M_PI,M_PI+M_PI/2, 0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin - self.cornerRadius, 0.0);
@@ -158,29 +160,55 @@
     CGContextSaveGState(c);
     CGContextSetStrokeColorWithColor(c, [self.separateLineColor CGColor]);
     switch (self.position) {
-        case GroupCellPositionTop:
+        case InputCellPositionTop:
             CGContextMoveToPoint(c, rect.size.width-self.margin-0.5f, rect.size.height);
             CGContextAddLineToPoint(c, self.margin+0.5f, rect.size.height);
             CGContextDrawPath(c,kCGPathStroke);
             break;
-        case GroupCellPositionBottom:
+        case InputCellPositionBottom:
             CGContextMoveToPoint(c, self.margin+0.5f, 0.0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin-0.5f, 0.0);
             CGContextDrawPath(c,kCGPathStroke);
             break;
-        case GroupCellPositionMiddel:
+        case InputCellPositionMiddel:
             CGContextMoveToPoint(c, self.margin+0.5f, 0.0);
             CGContextAddLineToPoint(c, rect.size.width-self.margin-0.5f, 0.0);
             CGContextMoveToPoint(c, self.margin+0.5f, rect.size.height);
             CGContextAddLineToPoint(c, rect.size.width-self.margin-0.5f, rect.size.height);
             CGContextDrawPath(c,kCGPathStroke);
             break;
-        case GroupCellPositionSingle:
+        case InputCellPositionSingle:
             break;
         default:
             break;
     }
     CGContextRestoreGState(c);
+}
+
+- (void)setInputCellAlignement:(InputCellAlignement)inputCellAlignement
+{
+    switch (inputCellAlignement) {
+        case InputCellAlignementLeft:
+            self.titleAlignment = NSTextAlignmentLeft;
+            self.inputFieldAlignment = NSTextAlignmentLeft;
+            break;
+        case InputCellAlignementRight:
+            self.titleAlignment = NSTextAlignmentRight;
+            self.inputFieldAlignment = NSTextAlignmentRight;
+            break;
+        case InputCellAlignementCenter:
+            self.titleAlignment = NSTextAlignmentRight;
+            self.inputFieldAlignment = NSTextAlignmentLeft;
+            break;
+        case InputCellAlignementSides:
+            self.titleAlignment = NSTextAlignmentLeft;
+            self.inputFieldAlignment = NSTextAlignmentRight;
+            break;
+        default:
+            break;
+    }
+    
+    [self setNeedsLayout];
 }
 
 #pragma mark - 
@@ -328,7 +356,7 @@
     self.inputTextField.secureTextEntry = secureTextEntry;
 }
 
-- (void)setPosition:(GroupCellPosition)position
+- (void)setPosition:(InputCellPosition)position
 {
     _position = position;
     [self setNeedsDisplay];
